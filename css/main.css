@@ -211,6 +211,12 @@ footer {
 	margin: 0;
 	padding: 20px;
 }
+#products {
+	padding-top: 100px;
+}
+#newsletter {
+	padding: 10px;
+}
 /* ***********************************
 			RESPONVSIVE GRID MAGIC
  ************************************* */
@@ -389,7 +395,10 @@ img {
 
 /* 1.4 - Forms */
   /* 1.5 - Lists */
-
+	body > header li {
+		display: block;
+		padding: 0;
+	}
   /* 1.6 - Tables */
   
 /*--------------------------------------------------------------
