@@ -58,6 +58,13 @@ h2 {
 }
 h3 {
 	font-size: 1.875rem;
+	margin: 0;
+}
+.product p {
+	margin: 0;
+}
+p.product-description {
+	font-size: 0.85rem;
 }
 body > header {
 	text-align: center;
@@ -101,6 +108,15 @@ body > header a:hover {
 	background-color: #a81a16;
 	border: 1px solid #a81a16;
 }
+.product .btn {
+	border: 1px solid #2E2E2E;
+	padding: 10px;
+	color: #2E2E2E;
+}
+.product .btn:hover {
+	border: 1px solid transparent;
+	color: #fff;
+}
 #newsletter .btn:hover {
 	background-color: #161616;
 	border: 1px solid #161616;
@@ -135,10 +151,12 @@ footer a:hover {
 ul {
 	list-style-type:  none;
 	text-align: center;
+	margin: 0;
 }
 body > header li {
 	display: inline-block;
 	padding: 4%;
+	background-color: red;
 }
 footer li {
 	display: inline-block;
@@ -216,6 +234,15 @@ footer {
 }
 #newsletter {
 	padding: 10px;
+}
+body > section {
+	padding: 100px 0;
+}
+#contact {
+	padding: 0;
+}
+figure {
+	margin: 0;
 }
 /* ***********************************
 			RESPONVSIVE GRID MAGIC
@@ -396,8 +423,14 @@ img {
 /* 1.4 - Forms */
   /* 1.5 - Lists */
 	body > header li {
+		display: inline-block;
+		padding: 5px;
+	}
+	body > header li img {
 		display: block;
-		padding: 0;
+	}
+	#contact p {
+		clear: both;
 	}
   /* 1.6 - Tables */
   
@@ -441,6 +474,14 @@ img {
 }
 	.roast {
 		width: 100%;
+	}
+	#map {
+		width: 50%;
+		float: left;
+	}
+	#location {
+		width: 50%;
+		float: right;
 	}
 /*--------------------------------------------------------------
 4.0 - Media

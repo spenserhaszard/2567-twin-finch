@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -10,300 +11,319 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(45.510835, -122.661370),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+        function initialize() {
+            var mapCanvas = document.getElementById('map');
+            var mapOptions = {
+                center: new google.maps.LatLng(45.510835, -122.661370),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
         }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    <title>Twin Finch Prototype</title>
-    </head>
+    <title>Twin Finch Assignment 6</title>
+</head>
 
-    <body>
-<header id="home" class="black">
-      <div class="wrapper">
-    <div class="row">
-          <div class="col-5-6 col-center">
-        <ul>
-              <li><a href="#home">home</a></li>
-              <li><a href="#products">products</a></li>
-              <li> <a href="#home">
-                <h1> <img src="img/logo.png" alt="Twin Finch Roastery"> </h1>
-                </a> </li>
-              <li><a href="#about">our process</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
-      </div>
+<body>
+    <header id="home" class="black">
+        <div class="wrapper">
+            <nav class="col-5-6 col-center">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#products">products</a></li>
+                    <li>
+                        <a href="#home">
+                            <h1> <img src="img/logo.png" alt="Twin Finch Roastery"> </h1>
+                        </a>
+                    </li>
+                    <li><a href="#about">our process</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="col-2-3 col-center">
+                <p><span class="bold">Twin Finch </span>Roastery is an authentic micro-roastery; small, dedicated, & highly focused on quality.
+                    <br>
+                </p>
+                <p>
+                    <a href="#products" class="btn">Shop</a>
+                </p>
+            </div>
         </div>
-    <div class="row">
-          <div class="col-5-6 col-center">
-        <p><span class="bold">Twin Finch </span>Roastery is an authentic micro-roastery;<br>
-              small, dedicated, & highly focused on quality.<br>
-            </p>
-        <a href="#products" class="btn">Shop</a></div>
-        </div>
-  </div>
     </header>
 
-<!-- Products -->
-<section id="products" class="grey">
-      <div class="wrapper">
-    <div class="row">
-          <div class="col-5-6 col-center">
-        <header>
-              <h2>our coffees</h2>
-              <p>We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home. </p>
-            </header>
-      </div>
+    <!-- Products -->
+    <section id="products" class="grey">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-5-6 col-center">
+                    <header>
+                        <h2>our coffees</h2>
+                        <p>We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home. </p>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <section class="product col-1-2 pull-left">
+                    <div class="white row">
+                        <div class="product-img col-1-2">
+                            <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
+                            <div class="roast black">
+                                <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
+                                <p>light</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="row">
+                                <header class="col-2-3">
+                                    <h3>Sunrise</h3>
+                                </header>
+                                <div class="col-1-3">
+                                    <p>&#36;17.95 <span>1 lb. bag</span></p>
+                                </div>
+                            </div>
+                            <p class="product-description">Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
+                            <div class="row">
+                                <div class="col-2-3">
+                                    <p>La Chiapas, Mexico</p>
+                                </div>
+                                <div class="col-1-3">
+                                    <p><a href="#" class="btn">add to cart</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="product col-1-2 pull-right">
+                    <div class="white row">
+                        <div class="product-img col-1-2">
+                            <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
+                            <div class="roast black">
+                                <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
+                                <p>medium</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="row">
+                                <header class="col-2-3">
+                                    <h3>Finch House Blend</h3>
+                                </header>
+                                <div class="col-1-3">
+                                    <p>&#36;17.95 <span>1 lb. bag</span></p>
+                                </div>
+                            </div>
+                            <p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
+                            <div class="row">
+                                <div class="col-2-3">
+                                    <p>Cajamarca & Moyobamba Regions, Peru</p>
+                                </div>
+                                <div class="col-1-3">
+                                    <p><a href="#" class="btn">add to cart</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                <section class="product col-1-3 pull-left">
+                    <div class="white row">
+                        <div class="product-img col-1-2">
+                            <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
+                            <div class="roast black">
+                                <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
+                                <p>Medium-Dark</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="row">
+                                <header class="col-2-3">
+                                    <h3>Evening Oak</h3>
+                                </header>
+                                <div class="col-1-3">
+                                    <p>&#36;19.95 <span>1 lb. bag</span></p>
+                                </div>
+                            </div>
+                            <p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
+                            <div class="row">
+                                <div class="col-2-3">
+                                    <p>Eastern Java, Indonesia</p>
+                                </div>
+                                <div class="col-1-3">
+                                    <p><a href="#" class="btn">add to cart</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="product col-1-3 pull-left">
+                    <div class="white row">
+                        <div class="product-img col-1-2">
+                            <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
+                            <div class="roast black">
+                                <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
+                                <p>dark</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="row">
+                                <header class="col-2-3">
+                                    <h3>Midnight</h3>
+                                </header>
+                                <div class="col-1-3">
+                                    <p>&#36;17.95 <span>1 lb. bag</span></p>
+                                </div>
+                            </div>
+                            <p>Roasted into second crack for a big, bold and dark cup. Beans display oil.</p>
+                            <div class="row">
+                                <div class="col-2-3">
+                                    <p>Latin America</p>
+                                </div>
+                                <div class="col-1-3">
+                                    <p><a href="#" class="btn">add to cart</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="product col-1-3 pull-left">
+                    <div class="white row">
+                        <div class="product-img col-1-2">
+                            <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
+                            <div class="roast black">
+                                <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
+                                <p>---</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="row">
+                                <header class="col-2-3">
+                                    <h3>Espresso</h3>
+                                </header>
+                                <div class="col-1-3">
+                                    <p>&#36;19.95 <span>1 lb. bag</span></p>
+                                </div>
+                            </div>
+                            <p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
+                            <div class="row">
+                                <div class="col-2-3">
+                                    <p>Latin America, Africa, Indonesia</p>
+                                </div>
+                                <div class="col-1-3">
+                                    <p><a href="#" class="btn">add to cart</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-    <div class="row">
-          <section class="product col-1-2 pull-left">
-        <div class="white row">
-              <div class="product-img col-1-2"> <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
-            <div class="roast black"> <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
-                  <p>light</p>
-                </div>
-          </div>
-              <div class="col-1-2">
-            <div class="row">
-                  <header class="col-2-3">
-                <h3>house blend</h3>
-              </header>
-                  <div class="col-1-3">
-                <p>&#36;19.95 <span>1 lb. bag</span></p>
-              </div>
-                </div>
-            <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-            <div class="row">
-                  <div class="col-2-3">
-                <p>La Chiapas, Mexico</p>
-              </div>
-                  <div class="col-1-3">
-                <p><a href="#" class="btn">add to cart</a></p>
-              </div>
-                </div>
-          </div>
-            </div>
-      </section>
-          <section class="product col-1-2 pull-right">
-        <div class="white row">
-              <div class="product-img col-1-2"> <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
-            <div class="roast black"> <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
-                  <p>dark</p>
-                </div>
-          </div>
-              <div class="col-1-2">
-            <div class="row">
-                  <header class="col-2-3">
-                <h3>sunrise</h3>
-              </header>
-                  <div class="col-1-3">
-                <p>&#36;19.95 <span>1 lb. bag</span></p>
-              </div>
-                </div>
-            <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-            <div class="row">
-                  <div class="col-2-3">
-                <p>La Chiapas, Mexico</p>
-              </div>
-                  <div class="col-1-3">
-                <p><a href="#">add to cart</a></p>
-              </div>
-                </div>
-          </div>
-            </div>
-      </section>
-        </div>
-    <div class="row">
-          <section class="product col-1-3 pull-left">
-        <div class="white row">
-              <div class="product-img col-1-2"> <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
-            <div class="roast black"> <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
-                  <p>dark</p>
-                </div>
-          </div>
-              <div class="col-1-2">
-            <div class="row">
-                  <header class="col-2-3">
-                <h3>sunrise</h3>
-              </header>
-                  <div class="col-1-3">
-                <p>&#36;19.95 <span>1 lb. bag</span></p>
-              </div>
-                </div>
-            <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-            <div class="row">
-                  <div class="col-2-3">
-                <p>La Chiapas, Mexico</p>
-              </div>
-                  <div class="col-1-3">
-                <p><a href="#">add to cart</a></p>
-              </div>
-                </div>
-          </div>
-            </div>
-      </section>
-          <section class="product col-1-3 pull-left">
-        <div class="white row">
-              <div class="product-img col-1-2"> <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
-            <div class="roast black"> <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
-                  <p>dark</p>
-                </div>
-          </div>
-              <div class="col-1-2">
-            <div class="row">
-                  <header class="col-2-3">
-                <h3>sunrise</h3>
-              </header>
-                  <div class="col-1-3">
-                <p>&#36;19.95 <span>1 lb. bag</span></p>
-              </div>
-                </div>
-            <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-            <div class="row">
-                  <div class="col-2-3">
-                <p>La Chiapas, Mexico</p>
-              </div>
-                  <div class="col-1-3">
-                <p><a href="#">add to cart</a></p>
-              </div>
-                </div>
-          </div>
-            </div>
-      </section>
-          <section class="product col-1-3 pull-left">
-        <div class="white row">
-              <div class="product-img col-1-2"> <!-- ".col-1-2 .col-1-2" ".col-1-3 .col-1-2" 100% on large display, 50% on small display -->
-            <div class="roast black"> <!-- position div to be in the lower right hand corner  & text align center w/ set width on large display, 100%  on small display -->
-                  <p>dark</p>
-                </div>
-          </div>
-              <div class="col-1-2">
-            <div class="row">
-                  <header class="col-2-3">
-                <h3>sunrise</h3>
-              </header>
-                  <div class="col-1-3">
-                <p>&#36;19.95 <span>1 lb. bag</span></p>
-              </div>
-                </div>
-            <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-            <div class="row">
-                  <div class="col-2-3">
-                <p>La Chiapas, Mexico</p>
-              </div>
-                  <div class="col-1-3">
-                <p><a href="#">add to cart</a></p>
-              </div>
-                </div>
-          </div>
-            </div>
-      </section>
-        </div>
-  </div>
     </section>
-<blockquote class="red">
-      <div class="wrapper">
-    <div class="row">
-          <div class="col-3-4 col-center">
-        <p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.” <br>
-              <cite>&mdash; Coffee Review</cite></p>
-      </div>
+    <blockquote class="red">
+        <div class="wrapper">
+            <div class="col-3-4 col-center">
+                <p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>
+                <footer>
+                    <p>&mdash; <a href="http://www.coffeereview.com/" target="_blank">Coffee Review</a></p>
+                </footer>
+            </div>
         </div>
-  </div>
     </blockquote>
-<section id="about" class="white">
-      <div class="wrapper">
-    <div class="row">
-          <div class="col-3-4 col-center">
-        <header>
-              <h2>our process</h2>
-            </header>
-        <p>Our coffee is roasted in a hot air, refractory lined roaster with an extraordinary level of control. The significance of relying on a high volume of hot air to roast coffee beans can't be understated. Most small coffee roasters use a single stage burner which offers virtually no control during the roasting process. The refractory significantly reduces hot spots which can damage coffee beans and produces a much more even roasting environment.</p>
-        <p>Check out this article on <a href="http://www.coffeereview.com" target="_blank">How to Brew our Coffee</a>.</p>
-      </div>
-        </div>
-  </div>
-    </section>
-<section id="contact" class="bg-red black"> <!-- controls background color and the vertical space so that the map doesn't interfere with the text above -->
-      <div class="wrapper">
-    <div class="row">
-          <div class="col-1-2"> <!-- defines the responsive width of the map -->
-        <div id="map"> <!-- place the map on a separate div to achieve the space between the map and content --> 
+    <section id="about" class="white">
+        <div class="wrapper">
+            <div class="col-3-4 col-center">
+                <header>
+                    <h2>our process</h2>
+                </header>
+                <p>Our coffee is roasted in a hot air, refractory lined roaster with an extraordinary level of control. The significance of relying on a high volume of hot air to roast coffee beans can't be understated. Most small coffee roasters use a single stage burner which offers virtually no control during the roasting process. The refractory significantly reduces hot spots which can damage coffee beans and produces a much more even roasting environment.</p>
+                <p>Check out this article on <a href="http://www.coffeereview.com" target="_blank">How to Brew our Coffee</a>.</p>
             </div>
-        <div id="location" class="white">
-              <div class="col-2-3 col-center">
-            <p> You can buy from us directly at our Portland storefront located at <br>
-                  <span class="bold">457 NW Market Street</span>. </p>
-          </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-red black">
+        <!-- controls background color and the vertical space so that the map doesn't interfere with the text above -->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-1-2">
+                    <!-- defines the responsive width of the map -->
+                    <figure>
+                        <div id="map">
+                            <!-- place the map on a separate div to achieve the space between the map and content -->
+                        </div>
+                        <figcaption id="location" class="white">
+                            <div class="col-2-3 col-center">
+                                <p> You can buy from us directly at our Portland storefront located at
+                                    <br>
+                                    <span class="bold">457 NW Market Street</span>. </p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <p>Online orders usually ship quickly and arrive within three business days. We only ship the freshest coffee and your satisfaction is guaranteed. Our rotating, featured coffees are roasted on a more limited basis and your order may be held until the next time a batch hits the roaster. </p>
+                </div>
+                <div class="col-1-2">
+                    <header>
+                        <h2>let's talk</h2>
+                    </header>
+                    <form action="#">
+                        <label for="name">Full Name</label>
+                        <input id="name" type="text" placeholder="Full Name">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Email">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <p>
+                            <a href="#" class="pull-right">send</a>
+                        </p>
+                    </form>
+                </div>
             </div>
-        <p>Online orders usually ship quickly and arrive within three business days. We only ship the freshest coffee and your satisfaction is guaranteed. Our rotating, featured coffees are roasted on a more limited basis and your order may be held until the next time a batch hits the roaster. </p>
-      </div>
-          <div class="col-1-2">
-        <header>
-              <h2>let's talk</h2>
-            </header>
-        <form action="#">
-              <label for="name">Full Name</label>
-              <input id="name" type="text" placeholder="Full Name">
-              <label for="name">Email</label>
-              <input id="email" type="email" placeholder="Email">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-              <a href="#" class="pull-right">send</a>
-            </form>
-      </div>
         </div>
-  </div>
     </section>
-<section id="newsletter" class="red">
-      <div class="wrapper">
-    <div class="row">
-          <div class="col-1-3">
-        <h3>Get daily dose of Twin Finch.</h3>
-      </div>
-          <div class="col-2-3">
-        <form action="#">
-              <label for="newsletter-email"></label>
-              <div class="col-3-4">
-            <input id="newsletter-email" type="email" placeholder="Email" class="pull-left">
-          </div>
-              <div class="col-1-4 pull-right"> <a href="#" class="btn pull-right">sign up</a> </div>
-            </form>
-      </div>
+    <section id="newsletter" class="red">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-1-3">
+                    <h3>Get daily dose of Twin Finch.</h3>
+                </div>
+                <div class="col-2-3">
+                    <form action="#">
+                        <label for="newsletter-email">Your email</label>
+                        <div class="col-3-4">
+                            <input id="newsletter-email" type="email" placeholder="Email" class="pull-left">
+                        </div>
+                        <div class="col-1-4 pull-right"> <a href="#" class="btn pull-right">sign up</a> </div>
+                    </form>
+                </div>
+            </div>
         </div>
-  </div>
     </section>
-<footer class="black">
-      <div class="wrapper">
-    <div class="row">
-          <ul>
-        <li> <a href="htttp://www.facebook.com" target="_blank">facebook</a> </li>
-        <li><a href="http://www.twitter.com" target="_blank">twitter</a></li>
-        <li><a href="https://www.google.com/+" target="_blank">Google+</a></li>
-      </ul>
+    <footer class="black">
+        <div class="wrapper">
+            <div class="row">
+                <ul>
+                    <li> <a href="htttp://www.facebook.com" target="_blank">facebook</a> </li>
+                    <li><a href="http://www.twitter.com" target="_blank">twitter</a></li>
+                    <li><a href="https://www.google.com/+" target="_blank">Google+</a></li>
+                </ul>
+            </div>
+            <p>Copyright &copy; 2016 Twin Finch. All rights reserved.</p>
         </div>
-    <p>Copyright &copy; 2016 Twin Finch. All rights reserved.</p>
-  </div>
     </footer>
-<script type="text/ecmascript">
-  $('a[href*="#"]:not([href="#"])').click(function() {
-  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-      return false;
-    }
-  }
-});
-</script>
+    <script type="text/ecmascript">
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
