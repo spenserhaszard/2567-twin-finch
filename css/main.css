@@ -55,16 +55,21 @@ h1, h2, h4, h5, h6 {
 }
 h2 {
 	font-size: 3.0rem;
+	margin-bottom: 50px;
 }
 h3 {
 	font-size: 1.875rem;
 	margin: 0;
+}
+section header p {
+	margin-bottom: 30px;
 }
 .product p {
 	margin: 0;
 }
 p.product-description {
 	font-size: 0.85rem;
+	margin-bottom: 40px;
 }
 body > header {
 	text-align: center;
@@ -77,6 +82,17 @@ body > header P {
 .bold {
 	font-weight: 700;
 }
+.center {
+	text-align: center;
+}
+.price {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+.price span {
+	font-weight: 300;
+	font-size: 1rem;
+}
 #location {
 	text-align: center;
 }
@@ -87,6 +103,10 @@ footer {
 a {
 	text-decoration: none;
 	color: #a81a16;
+	font-weight: 700;
+}
+section a:hover {
+	color: #000;
 }
 body > header a {
 	color: #fff;
@@ -95,6 +115,9 @@ body > header a {
 }
 body > header a:hover {
 	border-bottom: solid #a81a16;
+}
+blockquote footer a:hover {
+	color: #2e2e2e;
 }
 .btn {
 	text-align: center;
@@ -195,12 +218,23 @@ blockquote {
 	text-align: center;
 	font-size: 1.438rem;
 }
+blockquote footer {
+	padding: 0;
+}
 .roast {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	text-align: center;
-	padding: 0 20px;
+	padding: 20px;
+}
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding: 14px 30px;
+	width: 100%;
 }
 .product .col-1-2 {
 	width: 100%;
@@ -223,16 +257,18 @@ footer {
 	padding: 20px;
 }
 #products {
-	padding-top: 100px;
+	padding-top: 30px;
+    margin-top: -40px;
 }
 #newsletter {
-	padding: 10px;
+	padding: 20px;
 }
 body > section {
-	padding: 100px 0;
+	padding: 50px 0;
 }
 #contact {
 	padding: 0;
+	padding-bottom: 50px;
 }
 figure {
 	margin: 0;
