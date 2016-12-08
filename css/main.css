@@ -12,7 +12,7 @@
 	1.5 - Lists
 	1.6 - Tables
 2.0 - Navigation Menus
-	3.1 - Main Menu
+	2.1 - Main Menu
 	3.2 - Sub Menu
 	3.3 - Footer Menu
 3.0 - Content
@@ -129,6 +129,11 @@ blockquote footer a:hover {
 .btn:hover {
 	background-color: #a81a16;
 	border: #a81a16;
+}
+.shop {
+	border: 10px solid #a81a16;
+	background-color: green;
+	color: yellow;
 }
 .product .btn {
 	border: 1px solid #2E2E2E;
@@ -260,6 +265,15 @@ footer {
 	padding-top: 30px;
     margin-top: -40px;
 }
+.flex {
+		-moz-display: flex;
+		-o-display: flex;
+		-ms-display: flex;
+		-webkit-display: flex;
+		display: flex;
+		overflow: hidden;
+		margin-bottom: 20px;
+}
 #newsletter {
 	padding: 20px;
 }
@@ -272,6 +286,9 @@ body > section {
 }
 figure {
 	margin: 0;
+}
+.show {
+	display: block;
 }
 /* ***********************************
 			RESPONVSIVE GRID MAGIC
@@ -381,10 +398,24 @@ img {
 }
 .product-img {
 	height: 268px;
-	background-image: url(../img/twin-finch-packaging.jpg);
 	background-size: cover;
 	background-position: 0;
 	position: relative;
+}
+#sunrise {
+	background-image: url(../img/packaging-sunrise.jpg);
+}
+#house {
+	background-image: url(../img/twin-finch-packaging.jpg);
+}
+#evening {
+	background-image: url(../img/packaging-evening-oak.jpg);
+}
+#midnight {
+	background-image: url(../img/packaging-midnight.jpg);
+}
+#espresso {
+	background-image: url(../img/packaging-espresso.jpg);
 }
 /*--------------------------------------------------------------
 5.0 - Utility
