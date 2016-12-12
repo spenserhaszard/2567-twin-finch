@@ -122,11 +122,6 @@ blockquote footer a:hover {
 	border: #a81a16;
 	color: #fff;
 }
-.shop {
-	border: 10px solid #a81a16;
-	background-color: green;
-	color: yellow;
-}
 .btn-product, .product .active {
 	padding: 10px;
 	color: #2E2E2E;
@@ -158,6 +153,7 @@ input[type="text"], input[type="email"], textarea {
 	width: 100%;
 	margin-bottom: 15px;
 	font-style: italic;
+	color: #fff;
 }
 #newsletter input {
 	width: 48%;
@@ -174,6 +170,21 @@ form a, footer a {
 }
 footer a:hover {
 	color: #a81a16;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+#contact input:focus, textarea:focus {
+	border: 1px solid #A81A16;
 }
 /* 1.5 - Lists */
 ul {
@@ -416,13 +427,14 @@ figure {
 body > header {
 	background-image: url(../img/hero.jpg);
 	background-size: cover;
+	/* needs vendor */
 	padding-bottom: 100px;
 }
 img {
 	max-width: 100%;
 }
 .product-img {
-	background-size: cover;
+	background-size: cover; /* needs vendor */
 	background-position: 0;
 	position: relative;
 }
@@ -570,6 +582,7 @@ nav li:nth-child(3) {
 }
 .roast {
 	width: 100%;
+	padding: 7px;
 }
 #map {
 	width: 50%;
