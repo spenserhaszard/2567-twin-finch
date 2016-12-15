@@ -19,20 +19,23 @@
 	3.1 - Site Structure (Site Header, Advertisement, Site Footer)
 	3.2 - Section Name
 	3.3 - Section Name
+	Columns
+	Fractions
 4.0 - Media
 5.0 - Utility
 	5.1 - Background Colors
 	5.2 - Text Colors
 	5.3 - Text Sizes
 	5.4 - Alignments
-6.0 - Misc Junk 
+
+Media Queries
+Columns
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 0.0 - Target All/General Styls
 -------------------------------------------------------------- */
 body {
-	color: #2e2e2e;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 16px;
 }
@@ -46,24 +49,27 @@ body {
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
-  /* 1.2 - Body Copy */
-h1, h2, h3, h4, h5, h6 {
+body, blockquote footer a:hover, .btn-product, .product .active {
+	color: #2e2e2e;
+}
+/* 1.2 - Body Copy */
+h1, h2, h3, h4, h5, h6, #newsletter p {
 	font-family: 'Amatic SC', cursive;
 }
-h1, h2, h4, h5, h6, body > header, .center, #location, footer, .btn, ul, blockquote, .roast, .banner  {
+h1, h2, h4, h5, h6, body > header, .center, #location, footer, .btn, ul, blockquote, .roast, .banner {
 	text-align: center;
 }
 h2 {
 	font-size: 3.0rem;
-	margin-bottom: 50px;
+	margin-bottom: 14px;
 }
-h3 {
+h3, #newsletter p {
 	font-size: 1.875rem;
 }
 section header p {
 	margin-bottom: 30px;
 }
-h3, .product p {
+h3, .product p, #newsletter p {
 	margin: 0;
 }
 p.product-description {
@@ -76,9 +82,6 @@ body > header P {
 }
 body > header P, .btn-product:hover, .active:hover, body > header a {
 	color: #fff;
-}
-.bold {
-	font-weight: 700;
 }
 .price {
 	font-size: 1.25rem;
@@ -104,9 +107,6 @@ body > header a {
 body > header a:hover {
 	border-bottom: solid #a81a16;
 }
-blockquote footer a:hover {
-	color: #2e2e2e;
-}
 .btn {
 	border: 1px solid #fff;
 	background-color: transparent;
@@ -118,29 +118,33 @@ blockquote footer a:hover {
 	font-size: 1.0rem;
 }
 .btn:hover {
-	background-color: #a81a16;
 	border: #a81a16;
 	color: #fff;
 }
+.btn:hover, .btn-product:hover, .active:hover, form a:hover {
+	background-color: #a81a16;
+}
 .btn-product, .product .active {
 	padding: 10px;
-	color: #2E2E2E;
 }
 .btn-product {
 	border: 1px solid #2E2E2E;
-}
-.btn-product:hover {
-	background-color: #a81a16;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
 }
 .active:hover {
 	border: transparent;
 }
 .product .active {
-	border: 2px solid red;
+	border: 2px solid #a81a16;
 }
 #newsletter .btn:hover {
 	background-color: #161616;
 	border: 1px solid #161616;
+}
+#newsletter p {
+	display: inline;
 }
 /* 1.4 - Forms */
 label {
@@ -162,9 +166,6 @@ form a {
 	border: 1px solid #fff;
 	padding: 10px 40px;
 }
-form a:hover {
-	background-color: #a81a16;
-}
 form a, footer a {
 	color: #fff;
 }
@@ -172,16 +173,16 @@ footer a:hover {
 	color: #a81a16;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fff;
+ color: #fff;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #fff;
+ color: #fff;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #fff;
+ color: #fff;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #fff;
+ color: #fff;
 }
 #contact input:focus, textarea:focus {
 	border: 1px solid #A81A16;
@@ -265,7 +266,7 @@ footer {
 }
 #location {
 	margin: 0;
-	padding: 20px;
+	padding: 26px;
 }
 #products {
 	padding-top: 30px;
@@ -288,6 +289,8 @@ footer {
 }
 .product > .white {
 	height: 100%;
+	position: relative;
+	padding-bottom: 40px;
 }
 .product-img {
 	height: 268px;
@@ -415,9 +418,6 @@ figure {
 .col-11-12 {
 	width: 91.66%;
 }
-.pull-left {
-	float: left;
-}
 .pull-right {
 	float: right;
 }
@@ -426,15 +426,12 @@ figure {
 -------------------------------------------------------------- */
 body > header {
 	background-image: url(../img/hero.jpg);
-	background-size: cover;
-	/* needs vendor */
 	padding-bottom: 100px;
 }
 img {
 	max-width: 100%;
 }
 .product-img {
-	background-size: cover; /* needs vendor */
 	background-position: 0;
 	position: relative;
 }
@@ -452,6 +449,13 @@ img {
 }
 #espresso {
 	background-image: url(../img/packaging-espresso.jpg);
+}
+body > header, .product-img {
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 /*--------------------------------------------------------------
 5.0 - Utility
@@ -478,37 +482,11 @@ img {
 	color: #161616;
 }
 
-/* 5.2 - Text Colors */
-  /* 5.3 - Text Sizes */
-  /* 5.4 - Alignments */
-  
-
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------------------------------------------------------------
 @Media Queries
 ------------------------------------------------------------------------------------------------------------------------------ */
-
-
-
-
-
-
-
-
-
 /* @Media */
 @media (max-width: 480px) {
-/*--------------------------------------------------------------
-0.0 - Target All/General Styls
--------------------------------------------------------------- */
-
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
@@ -521,8 +499,7 @@ img {
 .btn-product {
 	float: left;
 }
-/* 1.4 - Forms */
-  /* 1.5 - Lists */
+/* 1.5 - Lists */
 body > header li {
 	display: inline-block;
 	padding: 5px;
@@ -532,6 +509,7 @@ body > header li img {
 }
 #contact p {
 	clear: both;
+	padding-top: 15px;
 }
 header ul {
 	padding: 110px 0 5px;
@@ -540,15 +518,14 @@ nav li:nth-child(3) {
 	display: block;
 	position: absolute;
 	top: 5px;
-	left: 33%;
+	left: 38%;
 }
 /* 1.6 - Tables */
   
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
 -------------------------------------------------------------- */
-  /* 3.2 - Sub Menu */
-  /* 3.3 - Footer Menu */
+
 /*--------------------------------------------------------------
 3.0 - Content
 -------------------------------------------------------------- */
@@ -556,6 +533,25 @@ nav li:nth-child(3) {
 .wrapper {
 	width: 95%;
 }
+.product .col-1-2 {
+	width: 50%;
+	padding: 20px;
+}
+.roast {
+	width: 100%;
+	padding: 0px;
+}
+#map {
+	width: 50%;
+	float: left;
+}
+#location {
+	width: 50%;
+	float: right;
+}
+/* ***********************************
+			Columns
+ ************************************* */
 .col-1-4.col-sm, .col-1-8.col-sm {
 	width: 25%;
 }
@@ -577,37 +573,4 @@ nav li:nth-child(3) {
 .col-1-4:nth-child(2), .col-2-11, .col-9-11, .col-1-9, .col-8-9, .col-1-7, .col-1-8:nth-child(4), .col-1-6:nth-child(3), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9), .col-1-10:nth-child(even), .col-1-2, .col-1-3 {
 	padding-right: 0;
 }
-.product .col-1-2 {
-	width: 50%;
-	padding: 20px;
-}
-.roast {
-	width: 100%;
-	padding: 0px;
-}
-#map {
-	width: 50%;
-	float: left;
-}
-#location {
-	width: 50%;
-	float: right;
-}
-/*--------------------------------------------------------------
-4.0 - Media
--------------------------------------------------------------- */
-
-/*--------------------------------------------------------------
-5.0 - Utility
--------------------------------------------------------------- */
-  /* 5.1 - Background Colors */
-
-  /* 5.2 - Text Colors */
-  /* 5.3 - Text Sizes */
-  /* 5.4 - Alignments */
-  
-/*--------------------------------------------------------------
-6.0 - Misc Junk here
--------------------------------------------------------------- */
-
 }
